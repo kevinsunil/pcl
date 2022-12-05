@@ -15,7 +15,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import SVC
 
-lung_cancer_data = pd.read_csv('/content/sample_data/survey lung cancer.csv')
+lung_cancer_data = pd.read_csv('survey_lung_cancer.csv')
 
 lung_cancer_data.drop_duplicates()
 

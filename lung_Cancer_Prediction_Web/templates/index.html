@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Home page</title>
+    <link rel="stylesheet" href="{% static 'index.css' %}" type="text/css" />
+
+</head>
+
+
+<body>
+
+    <h1>Lung cancer prediction</h1>
+    <form action='result' method="GET">
+        {% csrf_token %}
+
+        <p>Gender:</p>
+        <input type="text" name="gender">
+        <br>
+
+        <p>Age:</p>
+        <input type="text" name="age">
+        <br>
+
+        <p>Smoking:</p>
+        <input type="text" name="smoking">
+        <br>
+
+        <p>Yellow fingure:</p>
+        <input type="text" name="fingure">
+        <br>
+
+        <p>Anxiety:</p>
+        <input type="text" name="anxiety">
+        <br>
+
+        <p>Peer Pressure:</p>
+        <input type="text" name="peerPressure">
+        <br>
+
+        <p>Chronic Disease:</p>
+        <input type="text" name="chronicDisease">
+        <br>
+
+        <p>Allergy:</p>
+        <input type="text" name="allergy">
+        <br>
+
+        <p>Fatigue:</p>
+        <input type="text" name="fatigue">
+        <br>
+
+        <p>Wheezing:</p>
+        <input type="text" name="wheezing">
+        <br>
+
+        <p>Alcohol Consumption:</p>
+        <input type="text" name="alcoholConsumption">
+        <br>
+
+        <p>Shortned Of Breath:</p>
+        <input type="text" name="shortnedOfBreath">
+        <br>
+
+        <p>Coughing:</p>
+        <input type="text" name="coughing">
+        <br>
+
+        <p>Swallowing Difficulty:</p>
+        <input type="text" name="swallowingDifficulty">
+        <br>
+
+        <p>Chest Pain:</p>
+        <input type="text" name="chestPain">
+        <br>
+
+
+        <input type="submit" value='Get Predictions'>
+    </form>
+</body>
+
+</html>

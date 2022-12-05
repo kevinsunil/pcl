@@ -18,10 +18,11 @@ import matplotlib.pyplot as plt
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import SVC
 import seaborn as sn
+import pickle
 
 """# Data Processing"""
 
-lung_cancer_data = pd.read_csv('/content/survey lung cancer.csv')
+lung_cancer_data = pd.read_csv("survey_lung_cancer.csv")
 
 lung_cancer_data.head()
 
@@ -92,10 +93,5 @@ print("Accuracy on testing data: ",test_data_accuracy)
 
 """Custom input"""
 
-input=(1,21,2,2,2,2,1,2,1,1,2,1,2,1,1)
-input_asnparray = np.asarray(input)
 
-input_reshaped = input_asnparray.reshape(1,-1)
-prediction = model.predict(input_reshaped)
-print(prediction)
-
+pickle.dump(model,open('lung_cancer_ml_model.sav',"wb"))
